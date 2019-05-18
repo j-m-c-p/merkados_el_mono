@@ -28,7 +28,7 @@
 						 
 				return $exit;		 
 			}
-/**
+			/**
 			*esta función contiene el encabezado de la página. 
 			*@return 		caracteres 		retorna el encabezado.
 			*/

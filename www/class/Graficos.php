@@ -1,5 +1,4 @@
-<?php 
-	/*
+/*
 	* 
 	* Autor: Jhonnatan Cubides
 	*
@@ -21,14 +20,14 @@
 				$exit="";
 				$exit="
 
-    			<link rel='stylesheet' href='bootstrap/css/bootstrap.min.css'>
+    			<link rel='stylesheet' href='css/bootstrap/css/bootstrap.min.css'>
 				<link rel='stylesheet' href='css/style.css'>
-				<link rel='stylesheet' href='bootstrap/css/bootstrap-theme.min.css'>
+				
 				";
 						 
 				return $exit;		 
 			}
-			/**
+/**
 			*esta función contiene el encabezado de la página. 
 			*@return 		caracteres 		retorna el encabezado.
 			*/

@@ -1,0 +1,56 @@
+body {
+    overflow-x:hidden;
+}
+.footer {
+    background: #061D25;
+    padding: 10px 0;
+  }
+  .footer a {
+    color: #70726F;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    transition: all .5s ease;
+  }
+  .footer a:first-child {
+    border-left: 1px solid #70726F;
+  }
+  .footer a:hover {
+    color: white;
+  }
+  h2 {
+    text-align: center
+  }
+  h4 {
+    text-align: center
+  }
+
+  .google-maps {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+    }
+    .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 80% !important;
+    }
+
+
+
+
+
+
+
+ul[data-bsp-ul-index] {
+          padding:0 0 0 0;
+          margin:0 0 40px 0;
+ }
+ul[data-bsp-ul-index] li {
+          list-style:none;
+          margin-bottom:10px;
+} 
+

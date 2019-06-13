@@ -25,28 +25,14 @@
 			<?php
             echo $obj_o->header();/* se imprime el encabezado */
           	?>		
-		
+	
 			<br>
 			<br>
-			<h2> PRODUCTOS </h2>
-			<div class="row">
-				<div class='col-xs-12 col-md-4 '>
-				</div>
-				<div class='col-xs-12 col-md-4 '>
-					
-					<div style="float: left;" >
-		                <?php
-		                 echo $obj_o->mostrar_productos( "tb_productos", 0, null, null, 'productos.php' ); //Trae los datos.
-		                 	
-		                ?>
-		            </div>
-	            </div>
-		        <div class='col-xs-12 col-md-4 '>
-				</div>
-	        </div>
-
-			<?php
-            echo $obj_o->footer();/* se imprime el footer */
+			<h2> PRODUCTOS </h2>	
+			
+            <?php
+             	echo $obj_o->mostrar_productos( "tb_productos", 0, null, null, 'productos.php' ); //Trae los datos.
+            	echo $obj_o->footer();/* se imprime el footer */
           	?>
 	        
 		</div>
@@ -55,6 +41,16 @@
 		<!--Insertamos el archivo JS compilado y comprimido -->
 		<script src="css/bootstrap/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141755670-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-141755670-1');
+		</script>
+
 	</body>
 </html>
 

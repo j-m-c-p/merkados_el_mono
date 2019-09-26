@@ -28,7 +28,9 @@
 	
 			<br>
 			<br>
-			<h2> PRODUCTOS </h2>	
+
+			<h2> ABARROTES </h2>	
+		
 			
             <?php
              	echo $obj_o->mostrar_productos( "tb_productos", 0, null, null, 'productos.php' ); //Trae los datos.

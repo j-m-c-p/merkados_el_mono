@@ -1,4 +1,5 @@
-/*
+<?php 
+	/*
 	* 
 	* Autor: Jhonnatan Cubides
 	*
@@ -38,22 +39,59 @@
 	
 
 				$exit .="<img class='img-fluid' alt='Responsive image' src='img/lo-01.png'>
+				
+
 				<br>
 				<nav class='navbar navbar-expand-lg  navbar-dark bg-dark'>
-					<a class='navbar-brand' href='#'></a>
-					<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation'>
-						<span class='navbar-toggler-icon'></span>
-					</button>
-					<div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
-							<div class='navbar-nav'>
-								<a class='nav-item nav-link hover' href='http://localhost/merkados_el_mono/www/index.php'>Inicio <span class='sr-only'>(current)</span></a>
-								<a class='nav-item nav-link' href='http://localhost/merkados_el_mono/www/mision-visi.php'>Misión-Visión</a>
-								<a class='nav-item nav-link' href='http://localhost/merkados_el_mono/www/productos.php'>productos</a>
-								<a class='nav-item nav-link ' href='http://localhost/merkados_el_mono/www/servicios.php'>servicios</a>
-								<a class='nav-item nav-link' href='http://localhost/merkados_el_mono/www/contactenos.php'>contactenos</a>
+				  
+				  <button class='navbar-toggler' type='button' data-toggle='collapse' 
+				          data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' 
+				          aria-expanded='false' aria-label='Toggle navigation'>
+				    <span class='navbar-toggler-icon'></span>
+				  </button>
 
-							</div>
-					</div>
+				  <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+				    <ul class='navbar-nav mr-auto'>
+				     
+				      <li class='nav-item'>
+				        <a class='nav-link' href='http://localhost/merkados_el_mono/www/index.php'>Inicio <span class='sr-only'>(current)</span></a>
+				      </li>
+				      <li class='nav-item'>
+				        <a class='nav-link' href='http://localhost/merkados_el_mono/www/mision-visi.php'>Misión-Visión</a>
+				      </li>
+
+				 
+				      <li class='nav-item dropdown'>
+				        <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' 
+				           data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+				          Productos
+				        </a>
+				        <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
+				          <a class='dropdown-item' href='http://localhost/merkados_el_mono/www/productos.php'>Abarrotes</a>
+				          <div class='dropdown-divider'></div>
+				          <a class='dropdown-item' href='http://localhost/merkados_el_mono/www/lacteos.php'>Lacteos</a>
+				          <div class='dropdown-divider'></div>
+				          <a class='dropdown-item' href='http://localhost/merkados_el_mono/www/fruver.php'>Fruver</a>
+				          <div class='dropdown-divider'></div>
+				          <a class='dropdown-item' href='http://localhost/merkados_el_mono/www/carnico.php'>Carnico</a>
+				          <div class='dropdown-divider'></div>
+				          <a class='dropdown-item' href='http://localhost/merkados_el_mono/www/aseo.php'>Aseo</a>
+				          <div class='dropdown-divider'></div>
+				          <a class='dropdown-item' href='http://localhost/merkados_el_mono/www/otros.php'>Otros</a>
+				          
+				          
+				        </div>
+				      </li>
+				      <li class='nav-item'>
+				        <a class='nav-link' href='http://localhost/merkados_el_mono/www/servicios.php'>servicios</a>
+				      </li>      
+				      <li class='nav-item'>
+				        <a class='nav-link' href='http://localhost/merkados_el_mono/www/contactenos.php'>contactenos</a>
+				      </li>
+				      
+				    </ul>
+				    
+				  </div>
 				</nav>";
 			
 				return $exit;

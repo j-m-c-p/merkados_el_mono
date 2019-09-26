@@ -31,37 +31,35 @@
 			
 			<h2> MERKADOS EL MONO ZOMAC S.A.S </h2>
 
-			
-	        <div class="row">
-				<div class='col-xs-12 col-md-2 '>
-				</div>
-				<div class='col-xs-12 col-md-4 '>
-				<h4> OFERTAS </h4>
-					<div style="overflow-y: auto; height: 100%; width: 600px">
-						<?php
-						echo $obj_o->mostrar_ofertas( "tb_ofertas", 0, null, null, 'productos.php' ); //Trae los datos.
-
-						?>
-		            </div>
-				</div>
-				<div class='col-xs-12 col-md-4 '>
-				<h4> PROMOCIONES </h4>
-					<div style="overflow-y: auto; height: 100%; width: 600px">
-			            <?php
-			            echo $obj_o->mostrar_ofertas( "tb_ofertas", 0, null, null, 'productos.php' ); //Trae los datos.
-		                 	
-		                ?>
-		            </div>
-				</div>
-			</div>
+			<h4> OFERTAS </h4>
 			<?php
-           	echo $obj_o->footer();/* se imprime el footer */
-          	?>
+			echo $obj_o->mostrar_ofertas( "tb_ofertas", 0, null, null, 'productos.php' ); //Trae los datos.
+
+			?>
 		</div>
+			
+		<div class="container-fluid">
+			<?php
+       		echo $obj_o->footer();/* se imprime el footer */
+      		?>
+		</div>
+		
+			
 		<!--Insertamos jQuery dependencia de Bootstrap-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-			<!--Insertamos el archivo JS compilado y comprimido -->
-			<script src="css/bootstrap/js/bootstrap.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<!--Insertamos el archivo JS compilado y comprimido -->
+		<script src="css/bootstrap/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141755670-1"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141755670-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-141755670-1');
+		</script>
+
 	</body>
 </html>

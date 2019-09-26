@@ -61,7 +61,10 @@
 					</div>
 					<div class="form-group">
 						<label for="peticion">Opinión</label>
-						<textarea name="dato3" rows="2" cols="83" placeholder="Escribe aquí tus comentarios"></textarea>
+						<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                        <div class="col-md-8">
+                            <textarea class="form-control" rows="4" cols="50" id="message" name="dato3" placeholder="Escribe aquí tus comentarios..."></textarea>
+                        </div>
 					</div>
 					<input type="hidden" name="table" value="tb_opiniones">
                     <input type="hidden" name="total-campos" value="3">
@@ -95,5 +98,17 @@
 		<!--Insertamos el archivo JS compilado y comprimido -->
 		<script src="css/bootstrap/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141755670-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-141755670-1');
+		</script>
+
+	
 	</body>
 </html>
+

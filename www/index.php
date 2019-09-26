@@ -39,16 +39,20 @@
 					<div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
 					  	<!--Indicators-->
 						<ol class="carousel-indicators">
-							<li  data-slide-to="0" class="active"></li>
-							<li  data-slide-to="1"></li>
-							<li  data-slide-to="2"></li>
+							<li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-2" data-slide-to="1"></li>
+							<li data-target="#carousel-example-2" data-slide-to="2"></li>
+							<li data-target="#carousel-example-2" data-slide-to="3"></li>
+							<li data-target="#carousel-example-2" data-slide-to="4"></li>
+							<li data-target="#carousel-example-2" data-slide-to="5"></li>
+							<li data-target="#carousel-example-2" data-slide-to="6"></li>
 						</ol>
 						<!--/.Indicators-->
 						<!--Slides-->
 						<div class="carousel-inner" role="listbox">
 							<div class="carousel-item active">
 								<div class="view">
-									<img class="d-block w-100" src="img/1c.jpg" alt="primera">
+									<img class="d-block w-100" src="img/1.jpeg" alt="primera">
 									<div class="mask rgba-black-light"></div>
 								</div>
 								<div class="carousel-caption">
@@ -71,6 +75,50 @@
 								<!--Mask color-->
 								<div class="view">
 									<img class="d-block w-100" src="img/3.jpg" alt="tercera">
+									<div class="mask rgba-black-light"></div>
+								</div>
+								<div class="carousel-caption">
+									<h3 class="h3-responsive">This is the third title</h3>
+									<p>hola3</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<!--Mask color-->
+								<div class="view">
+									<img class="d-block w-100" src="img/4.jpg" alt="cuarta">
+									<div class="mask rgba-black-light"></div>
+								</div>
+								<div class="carousel-caption">
+									<h3 class="h3-responsive">This is the third title</h3>
+									<p>hola3</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<!--Mask color-->
+								<div class="view">
+									<img class="d-block w-100" src="img/5.jpg" alt="quinta">
+									<div class="mask rgba-black-light"></div>
+								</div>
+								<div class="carousel-caption">
+									<h3 class="h3-responsive">This is the third title</h3>
+									<p>hola3</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<!--Mask color-->
+								<div class="view">
+									<img class="d-block w-100" src="img/6.jpg" alt="tercera">
+									<div class="mask rgba-black-light"></div>
+								</div>
+								<div class="carousel-caption">
+									<h3 class="h3-responsive">This is the third title</h3>
+									<p>hola3</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<!--Mask color-->
+								<div class="view">
+									<img class="d-block w-100" src="img/7.jpg" alt="tercera">
 									<div class="mask rgba-black-light"></div>
 								</div>
 								<div class="carousel-caption">
@@ -104,6 +152,7 @@
 			
 			<?php
             echo $obj_o->footer();/* se imprime el footer */
+
           	?>
 		</div>
 		<!--Insertamos jQuery dependencia de Bootstrap-->
@@ -111,7 +160,17 @@
 		<!--Insertamos el archivo JS compilado y comprimido -->
 		<script src="css/bootstrap/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141755670-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-141755670-1');
+		</script>
+
+	
 	</body>
 </html>
 

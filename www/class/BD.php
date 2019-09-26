@@ -120,6 +120,77 @@
 				{
 				
 					$exit .= "</div>";
+					$exit .= "<div class='row' style='margin-top:10px'>";
+					$btnMore++;
+					$cont = 0;
+				}
+			$cont++; 
+						
+			$exit .= "<div class='col-md-2'>";
+			$exit .= "<div class='card border-success '  style='width: 286px; height: 350px;'>";
+			$exit .= "<div class='card-block'><br>";
+			$exit .= "<img class='card-img-top' src='".$row['img']."' height='180px' width='2px' alt=''>";
+			$exit .= "<div class='card-body'>";
+			$exit .= "<h6 class='card-title'>".($row['pronom'])."</h6>";
+			$exit .= "<button type='button' class='btn btn-success'><h5>Precio:".'$'.$row['proprecio']."</h5></button>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+
+			// $cont++;	
+			// if ($cont%4 == 0) {
+				
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+				
+			// }
+			// if ($cont%8 ==0) {
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+			// }
+
+				
+			}
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div><br><br><br>";
+			
+
+			// $exit .= "</table>";
+			echo $exit;
+
+		}
+
+		function mostrar_productos_lacteos()
+		{
+			$exit ="";
+
+			$sql="SELECT img, pronom, proprecio FROM tb_productos WHERE grpnom='lacteos y derivados'  ";
+			include('config.php');
+
+			$connection=mysqli_connect($server,$usser, $key, $bd);
+			$result= $connection->query($sql);
+			//$exit .= "<table  class='table table-striped table-bordered table-hover table-condensed'>";
+			// $exit .= "<table>";
+
+			// $exit .="<tr>";
+			// $exit .="<th>Producto</th>";
+			// $exit .="<th>Precio</th>";
+
+
+			// $exit .="</tr>";
+			$exit .= "<div class='py-5'>";
+			$exit .= "<div class='container-fluid'>";
+			$exit .= "<div class='row hidden-md-up'>";
+			$exit .= "<div class='row'>";
+			$cont=0;
+			$btnMore=0;
+			while( $row = mysqli_fetch_assoc( $result ) )
+			{
+				
+				if ($cont == 6) 
+				{
+				
+					$exit .= "</div>";
 					$exit .= "<div class='row' style='margin-top:5px'>";
 					$btnMore++;
 					$cont = 0;
@@ -127,9 +198,9 @@
 			$cont++; 
 						
 			$exit .= "<div class='col-md-2'>";
-			$exit .= "<div class='card border-success '  style='width: 100%; height: 85%;'>";
-			$exit .= "<div class='card-block'>";
-			$exit .= "<img class='card-img-top' src='".$row['img']."' height='50%' width='10%' alt=''>";
+			$exit .= "<div class='card border-success '  style='width: 286px; height: 350px;'>";
+			$exit .= "<div class='card-block'><br>";
+			$exit .= "<img class='card-img-top' src='".$row['img']."' height='180px' width='2px' alt=''>";
 			$exit .= "<div class='card-body'>";
 			$exit .= "<h6 class='card-title'>".($row['pronom'])."</h6>";
 			$exit .= "<button type='button' class='btn btn-success'><h5>Precio:".'$'.$row['proprecio']."</h5></button>";
@@ -159,6 +230,299 @@
 			echo $exit;
 
 		}
+
+
+		function mostrar_productos_fruver()
+		{
+			$exit ="";
+
+			$sql="SELECT img, pronom, proprecio FROM tb_productos WHERE grpnom='fruver'  ";
+			include('config.php');
+
+			$connection=mysqli_connect($server,$usser, $key, $bd);
+			$result= $connection->query($sql);
+			//$exit .= "<table  class='table table-striped table-bordered table-hover table-condensed'>";
+			// $exit .= "<table>";
+
+			// $exit .="<tr>";
+			// $exit .="<th>Producto</th>";
+			// $exit .="<th>Precio</th>";
+
+
+			// $exit .="</tr>";
+			$exit .= "<div class='py-5'>";
+			$exit .= "<div class='container-fluid'>";
+			$exit .= "<div class='row hidden-md-up'>";
+			$exit .= "<div class='row'>";
+			$cont=0;
+			$btnMore=0;
+			while( $row = mysqli_fetch_assoc( $result ) )
+			{
+				
+				if ($cont == 6) 
+				{
+				
+					$exit .= "</div>";
+					$exit .= "<div class='row' style='margin-top:5px'>";
+					$btnMore++;
+					$cont = 0;
+				}
+			$cont++; 
+						
+			$exit .= "<div class='col-md-2'>";
+			$exit .= "<div class='card border-success '  style='width: 286px; height: 350px;'>";
+			$exit .= "<div class='card-block'><br>";
+			$exit .= "<img class='card-img-top' src='".$row['img']."' height='180px' width='2px' alt=''>";
+			$exit .= "<div class='card-body'>";
+			$exit .= "<h6 class='card-title'>".($row['pronom'])."</h6>";
+			$exit .= "<button type='button' class='btn btn-success'><h5>Precio:".'$'.$row['proprecio']."</h5></button>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+
+			// $cont++;	
+			// if ($cont%4 == 0) {
+				
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+				
+			// }
+			// if ($cont%8 ==0) {
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+			// }
+
+				
+			}
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			
+
+			// $exit .= "</table>";
+			echo $exit;
+
+		}
+
+
+		function mostrar_productos_carnico()
+		{
+			$exit ="";
+
+			$sql="SELECT img, pronom, proprecio FROM tb_productos WHERE grpnom='carnico'  ";
+			include('config.php');
+
+			$connection=mysqli_connect($server,$usser, $key, $bd);
+			$result= $connection->query($sql);
+			//$exit .= "<table  class='table table-striped table-bordered table-hover table-condensed'>";
+			// $exit .= "<table>";
+
+			// $exit .="<tr>";
+			// $exit .="<th>Producto</th>";
+			// $exit .="<th>Precio</th>";
+
+
+			// $exit .="</tr>";
+			$exit .= "<div class='py-5'>";
+			$exit .= "<div class='container-fluid'>";
+			$exit .= "<div class='row hidden-md-up'>";
+			$exit .= "<div class='row'>";
+			$cont=0;
+			$btnMore=0;
+			while( $row = mysqli_fetch_assoc( $result ) )
+			{
+				
+				if ($cont == 6) 
+				{
+				
+					$exit .= "</div>";
+					$exit .= "<div class='row' style='margin-top:5px'>";
+					$btnMore++;
+					$cont = 0;
+				}
+			$cont++; 
+						
+			$exit .= "<div class='col-md-2'>";
+			$exit .= "<div class='card border-success '  style='width: 286px; height: 350px;'>";
+			$exit .= "<div class='card-block'><br>";
+			$exit .= "<img class='card-img-top' src='".$row['img']."' height='180px' width='2px' alt=''>";
+			$exit .= "<div class='card-body'>";
+			$exit .= "<h6 class='card-title'>".($row['pronom'])."</h6>";
+			$exit .= "<button type='button' class='btn btn-success'><h5>Precio:".'$'.$row['proprecio']."</h5></button>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+
+			// $cont++;	
+			// if ($cont%4 == 0) {
+				
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+				
+			// }
+			// if ($cont%8 ==0) {
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+			// }
+
+				
+			}
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			
+
+			// $exit .= "</table>";
+			echo $exit;
+
+		}
+
+
+		function mostrar_productos_aseo()
+		{
+			$exit ="";
+
+			$sql="SELECT img, pronom, proprecio FROM tb_productos WHERE grpnom='aseo'  ";
+			include('config.php');
+
+			$connection=mysqli_connect($server,$usser, $key, $bd);
+			$result= $connection->query($sql);
+			//$exit .= "<table  class='table table-striped table-bordered table-hover table-condensed'>";
+			// $exit .= "<table>";
+
+			// $exit .="<tr>";
+			// $exit .="<th>Producto</th>";
+			// $exit .="<th>Precio</th>";
+
+
+			// $exit .="</tr>";
+			$exit .= "<div class='py-5'>";
+			$exit .= "<div class='container-fluid'>";
+			$exit .= "<div class='row hidden-md-up'>";
+			$exit .= "<div class='row'>";
+			$cont=0;
+			$btnMore=0;
+			while( $row = mysqli_fetch_assoc( $result ) )
+			{
+				
+				if ($cont == 6) 
+				{
+				
+					$exit .= "</div>";
+					$exit .= "<div class='row' style='margin-top:10px'>";
+					$btnMore++;
+					$cont = 0;
+				}
+			$cont++; 
+						
+			$exit .= "<div class='col-md-2'>";
+			$exit .= "<div class='card border-success '  style='width: 286px; height: 350px;'>";
+			$exit .= "<div class='card-block'><br>";
+			$exit .= "<img class='card-img-top' src='".$row['img']."' height='180px' width='2px' alt=''>";
+			$exit .= "<div class='card-body'>";
+			$exit .= "<h6 class='card-title'>".($row['pronom'])."</h6>";
+			$exit .= "<button type='button' class='btn btn-success'><h5>Precio:".'$'.$row['proprecio']."</h5></button>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+
+			// $cont++;	
+			// if ($cont%4 == 0) {
+				
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+				
+			// }
+			// if ($cont%8 ==0) {
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+			// }
+
+				
+			}
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			
+
+			// $exit .= "</table>";
+			echo $exit;
+
+		}
+
+
+
+		function mostrar_productos_otros()
+		{
+			$exit ="";
+
+			$sql="SELECT img, pronom, proprecio FROM tb_productos WHERE grpnom='otros'  ";
+			include('config.php');
+
+			$connection=mysqli_connect($server,$usser, $key, $bd);
+			$result= $connection->query($sql);
+			//$exit .= "<table  class='table table-striped table-bordered table-hover table-condensed'>";
+			// $exit .= "<table>";
+
+			// $exit .="<tr>";
+			// $exit .="<th>Producto</th>";
+			// $exit .="<th>Precio</th>";
+
+
+			// $exit .="</tr>";
+			$exit .= "<div class='py-5'>";
+			$exit .= "<div class='container-fluid'>";
+			$exit .= "<div class='row hidden-md-up'>";
+			$exit .= "<div class='row'>";
+			$cont=0;
+			$btnMore=0;
+			while( $row = mysqli_fetch_assoc( $result ) )
+			{
+				
+				if ($cont == 6) 
+				{
+				
+					$exit .= "</div>";
+					$exit .= "<div class='row' style='margin-top:5px'>";
+					$btnMore++;
+					$cont = 0;
+				}
+			$cont++; 
+						
+			$exit .= "<div class='col-md-2'>";
+			$exit .= "<div class='card border-success '  style='width: 286px; height: 350px;'>";
+			$exit .= "<div class='card-block'><br>";
+			$exit .= "<img class='card-img-top' src='".$row['img']."' height='180px' width='2px' alt=''>";
+			$exit .= "<div class='card-body'>";
+			$exit .= "<h6 class='card-title'>".($row['pronom'])."</h6>";
+			$exit .= "<button type='button' class='btn btn-success'><h5>Precio:".'$'.$row['proprecio']."</h5></button>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+
+			// $cont++;	
+			// if ($cont%4 == 0) {
+				
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+				
+			// }
+			// if ($cont%8 ==0) {
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+			// }
+
+				
+			}
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			
+
+			// $exit .= "</table>";
+			echo $exit;
+
+		}
+
+
+
+
 		function mostrar_ofertas()
 		{
 			$exit ="";
@@ -167,32 +531,71 @@
             include('config.php');
 
             $connection=mysqli_connect($server,$usser, $key, $bd);
-            $result= $connection->query($sql);
-            $exit .= "<table  class='table table-striped table-bordered table-hover table-condensed'>";
+			$result= $connection->query($sql);
+			//$exit .= "<table  class='table table-striped table-bordered table-hover table-condensed'>";
+			// $exit .= "<table>";
 
-            $exit .="<tr>";
-            $exit .="<th>Producto</td>";
-            $exit .="<th>Precio</td>";
-           
-            
-            $exit .="</tr>";
-            while( $row = mysqli_fetch_array( $result ) )
-            {
-              $exit .= "<tr>";
+			// $exit .="<tr>";
+			// $exit .="<th>Producto</th>";
+			// $exit .="<th>Precio</th>";
 
-                for( $i = 0; $i < mysqli_num_fields( $result ); $i ++ )
-                $exit .= "<td>".utf8_encode($row[ $i ])."</td>"; //Este es el dato impreso
-                 
-                
-              $exit .= "</tr>";
-            }
-            
 
-			$exit .= "</table>";
+			// $exit .="</tr>";
+			$exit .= "<div class='py-5'>";
+			$exit .= "<div class='container-fluid'>";
+			$exit .= "<div class='row hidden-md-up'>";
+			$exit .= "<div class='row'>";
+			$cont=0;
+			$btnMore=0;
+			while( $row = mysqli_fetch_assoc( $result ) )
+			{
+				
+				if ($cont == 6) 
+				{
+				
+					$exit .= "</div>";
+					$exit .= "<div class='row' style='margin-top:50px'>";
+					$btnMore++;
+					$cont = 0;
+				}
+			$cont++; 
+						
+			$exit .= "<div class='col-md-2'>";
+			$exit .= "<div class='card border-success '  style='width: 286px; height: 360px;'>";
+			$exit .= "<div class='card-block'>";
+
+			$exit .= "<div class='card-body'>";
+			$exit .= "<img class='card-img-top' src='".$row['url']."' height='180px' width='2px' alt=''>";
+			$exit .= "<h6 class='card-title'>".($row['nombre_producto'])."</h6>";
+			$exit .= "<button type='button' class='btn btn-success'><h5>Precio:".'$'.$row['precio_producto']."</h5></button>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div>";
+
+			// $cont++;	
+			// if ($cont%4 == 0) {
+				
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+				
+			// }
+			// if ($cont%8 ==0) {
+			// 	$exit .= "<div class='col-sm'>".utf8_encode($row[ $i ])."</div>"; //Este es el dato impreso	
+			// }
+
+				
+			}
+			$exit .= "</div>";
+			$exit .= "</div>";
+			$exit .= "</div><br><br><br>";
+			
+
+			// $exit .= "</table>";
 			echo $exit;
 
 		}
 
+		
 		
 
 		
